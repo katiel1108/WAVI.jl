@@ -108,7 +108,7 @@ function run_inversion_simulation!(inversion_simulation)
             fname = string("Chkpt",chkpt_tag, ".jld2")
             @save fname inversion_simulation
             chkpt_tag = (chkpt_tag == "A") ? "B" : "A"
-            println("making temporary checkpoint at timestep number $(simulation.clock.n_iter)")
+            println("making temporary checkpoint at timestep number $(inversion_simulation.clock.n_iter)")
         end
 
         #check if we have hit a permanent checkpoint
